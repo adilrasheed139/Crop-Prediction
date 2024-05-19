@@ -8,6 +8,19 @@ with open('rfc_model.pkl', 'rb') as file:
 
 # Create the Streamlit web interface
 st.title("Crop Prediction App")
+# Information about the input fields
+st.sidebar.write("""
+## Input Parameters:
+- **N:** Nitrogen content in the soil.
+- **P:** Phosphorus content in the soil.
+- **K** Potassium content in the soil.
+- **Temperature:** Average temperature in Celsius during the crop growth period.
+- **Humidity:** Average relative humidity during the crop growth period.
+- **pH:** Soil pH level, indicating acidity or alkalinity.
+- **Rainfall:** Total rainfall in mm during the crop growth period.                
+""")
+
+ 
 
 # Add input fields for user input
 st.sidebar.header("Enter Parameters:")
