@@ -12,3 +12,5 @@ The dataset consists of 8 variables:
 - **pH:** Soil pH level, indicating acidity or alkalinity.
 - **Rainfall:** Total rainfall in mm during the crop growth period.
 - **Label:** The type of crop being grown.
+
+# Deploy and check the results:
