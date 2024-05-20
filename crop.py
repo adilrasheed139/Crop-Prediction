@@ -8,7 +8,8 @@ with open('rfc_model.pkl', 'rb') as file:
 
 # Create the Streamlit web interface
 st.title("Crop Prediction App")
-# Information about the input fields
+
+# Sidebar information and image
 st.sidebar.write("""
 ## Input Parameters:
 - **N:** Nitrogen content in the soil.
@@ -19,8 +20,6 @@ st.sidebar.write("""
 - **pH:** Soil pH level, indicating acidity or alkalinity.
 - **Rainfall:** Total rainfall in mm during the crop growth period.                
 """)
-
- 
 
 # Add input fields for user input
 st.sidebar.header("Enter Parameters:")
@@ -39,6 +38,9 @@ def predict_crop(N, P, K, temperature, humidity, ph, rainfall):
     prediction = model.predict(input_data)
     return prediction[0]
 
+# Main section image
+st.image("farm_field.jpeg", use_column_width=True)  # Add your main image here
+
 if st.sidebar.button("Predict"):
     prediction = predict_crop(N, P, K, temperature, humidity, ph, rainfall)
-    st.write(f"Predicted Crop: {prediction}")
+    st.write(f"## Predicted Crop: {prediction}")
