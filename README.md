@@ -14,3 +14,4 @@ The dataset consists of 8 variables:
 - **Label:** The type of crop being grown.
 
 # Deploy and check the results:
+![Alt text](https://github.com/adilrasheed139/Crop-Prediction/blob/main/Result.jpg)
