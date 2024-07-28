@@ -1,10 +1,14 @@
 import streamlit as st
 import pandas as pd
 import pickle
+import joblib
 
 # Load the trained model
-with open('rfc_model.pkl', 'rb') as file:
-    model = pickle.load(file)
+#with open('rfc_model.pkl', 'rb') as file:
+#    model = pickle.load(file)
+# Load the model
+with open('rfc_model1.pkl', 'rb') as file:
+    model = joblib.load(file)
 
 # Create the Streamlit web interface
 st.title("Crop Prediction App")
